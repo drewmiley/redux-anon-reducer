@@ -1,0 +1,24 @@
+{
+  "name": "redux-anon-reducer",
+  "version": "1.0.0",
+  "description": "A simple anonymous reducer for redux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewmiley/redux-anon-reducer.git"
+  },
+  "keywords": [
+    "redux",
+    "anon",
+    "reducer"
+  ],
+  "author": "drewmiley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewmiley/redux-anon-reducer/issues"
+  },
+  "homepage": "https://github.com/drewmiley/redux-anon-reducer#readme"
+}
