@@ -36,9 +36,9 @@ import actionmap from './actionmap';
 const reducer = anonReducer(actionmap);
 ```
 
-By default, with an unexpected action type, it will return the state, however you can pass in what you would like it to return as a second parameter.
+In the case of sliced reducers, you can pass in an initial return state.
 
 ```
-const defaultReturnState = ...
-const reducer = anonReducer(actionmap, defaultReturnState);
+const initialReturn = ...
+const reducer = anonReducer(actionmap, initialReturn);
 ```
