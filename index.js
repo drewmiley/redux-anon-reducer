@@ -6,6 +6,6 @@ const anonReducer = (actionMap, initialReturn = null) =>
 
 export const anonReducersFromInitialState = (actionMaps, initialState) =>
     Object.assign({}, ...Object.keys(initialState)
-        .map(k => ({[k]: anonReducer(actionmaps[k], initialState[k])})));
+        .map(k => ({[k]: anonReducer(actionMaps[k], initialState[k])})));
 
 export default anonReducer;
