@@ -39,6 +39,15 @@ const reducer = anonReducer(actionmap);
 In the case of sliced reducers, you can pass in an initial return state.
 
 ```
+import { combineReducers } from 'redux';
 const initialReturn = ...
-const reducer = anonReducer(actionmap, initialReturn);
+const singleReducer = anonReducer(actionmap, initialReturn);
+const reducer = combineReducers({ singleReducer })
 ```
+
+You can initialise this within combineReducers as such with an initial state for each.
+
+```
+const reducer = combineReducers(Object.assign({}, ...Object.keys(initialState)
+    .map(k => ({[k]: anonReducer(actionmaps[k], initialState[k])}))))
+``
