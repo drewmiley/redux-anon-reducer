@@ -45,9 +45,12 @@ const singleReducer = anonReducer(actionmap, initialReturn);
 const reducer = combineReducers({ singleReducer })
 ```
 
-You can initialise this within combineReducers as such with an initial state for each.
+In the case where the reducers correspond exactly to properties of your inital state, we have provided a helper.
 
 ```
-const reducer = combineReducers(Object.assign({}, ...Object.keys(initialState)
-    .map(k => ({[k]: anonReducer(actionmaps[k], initialState[k])}))))
-``
+import { combineReducers } from 'redux';
+import { anonReducersFromInitialState } from 'redux-anon-reducer';
+import actionmaps from './actionmaps';
+const initialState = ...
+const reducer = combineReducers(anonReducersFromInitialState(actionmaps, initialState))
+```
